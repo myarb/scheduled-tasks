@@ -1,0 +1,18 @@
+name: English
+
+on:
+  schedule:
+    - cron:  "0 12 * * *" # once a day at noon
+
+jobs:
+  check_all_english_links:
+    name: Check all links
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: npm ci
+      run: npm ci
+    - name: Run script to open release issue if needed
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: script/open-enterprise-issue.js release

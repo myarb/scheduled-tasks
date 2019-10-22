@@ -1,0 +1,28 @@
+{
+  "name": "scheduled-tasks",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "8 - 12"
+  },
+  "repository": "https://github.com/docs/scheduled-tasks",
+  "dependencies": {
+    "@octokit/rest": "^16.33.1",
+    "child_process": "^1.0.2",
+    "dotenv-safe": "^8.1.0",
+    "got": "^9.6.0",
+    "jest-expect-message": "^1.0.2",
+    "node-fetch": "^2.6.0",
+    "standard": "^14.3.1"
+  },
+  "scripts": {
+    "lint": "standard --fix",
+    "test": "jest && standard"
+  },
+  "standard": {
+    "env": [
+      "browser",
+      "jest"
+    ]
+  }
+}

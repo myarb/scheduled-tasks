@@ -1,0 +1,9 @@
+.DS_Store
+.env
+.npmrc
+node_modules
+npm-debug.log
+
+# blc: broken link checker
+blc_output.log
+blc_output_internal.log
